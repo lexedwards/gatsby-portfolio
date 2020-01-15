@@ -1,15 +1,17 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio based on Gatsby framework",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Alex Edwards <hello@alexedwards.co>",
   "dependencies": {
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-google-analytics": "^2.1.33",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-sharp": "^2.3.7",
@@ -19,10 +21,33 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@babel/core": "^7.8.3",
+    "@storybook/addon-a11y": "^5.3.3",
+    "@storybook/addon-actions": "^5.3.3",
+    "@storybook/addon-backgrounds": "^5.3.3",
+    "@storybook/addon-docs": "^5.3.3",
+    "@storybook/addon-events": "^5.3.3",
+    "@storybook/addon-jest": "^5.3.3",
+    "@storybook/addon-knobs": "^5.3.3",
+    "@storybook/addon-links": "^5.3.3",
+    "@storybook/addon-notes": "^5.3.3",
+    "@storybook/addon-options": "^5.3.3",
+    "@storybook/addon-viewport": "^5.3.3",
+    "@storybook/addons": "^5.3.3",
+    "@storybook/react": "^5.3.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-gatsby": "^0.2.27",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
+    "sass": "^1.24.4"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio",
+    "full stack"
   ],
   "license": "MIT",
   "scripts": {
@@ -32,7 +57,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
+    "storybook": "NODE_ENV=production start-storybook -s public",
+    "build-storybook": "NODE_ENV=production build-storybook -s public"
   },
   "repository": {
     "type": "git",

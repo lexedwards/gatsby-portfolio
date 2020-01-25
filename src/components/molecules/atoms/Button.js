@@ -2,11 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from 'gatsby';
 
-export const Button = ({ size, type, label, action, children }) => {
+export const Button = ({ size, type, label, action, children, isSubmit }) => {
+  
+  const buttonAction = isSubmit ? 'submit' : 'button'
+  
   return type === "disabled" ? (
     <button
       disabled
-      type="button"
+      type={buttonAction}
       className={`button ui button-${type} ${size}`}
       aria-label={label}
     >
@@ -14,7 +17,7 @@ export const Button = ({ size, type, label, action, children }) => {
     </button>
   ) : (
     <button
-      type="button"
+      type={buttonAction}
       className={`button ui button-${type} ${size}`}
       aria-label={label}
       onClick={action}

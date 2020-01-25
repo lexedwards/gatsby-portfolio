@@ -127,6 +127,7 @@ export default function Input (props) {
       autoCorrect={inputDeclare.hasAutocorrect}
       autoCapitalize={inputDeclare.autocapitalize}
       inputMode={inputDeclare.inputMode}
+      onChange={inputDeclare.handleChange}
       />
       {inputDeclare.hasVerification &&
         ( useValidCheck !== null && (
@@ -156,6 +157,7 @@ export function LongInput (props) {
         disabled={inputDeclare.isDisabled}
         autoCorrect={inputDeclare.hasAutocorrect}
         autoCapitalize={inputDeclare.autocapitalize}
+        onChange={inputDeclare.handleChange}
       />
       {inputDeclare.hasVerification && (
         inputDeclare.isValid ? 

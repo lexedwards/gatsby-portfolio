@@ -1,8 +1,15 @@
-import { action } from "@storybook/addon-actions";
 import { addParameters, addDecorator } from '@storybook/react';
+import { action } from "@storybook/addon-actions";
 import { withA11y } from '@storybook/addon-a11y';
+import { withKnobs } from "@storybook/addon-knobs";
+import { jsxDecorator } from 'storybook-addon-jsx';
+
+import '../src/styles/main.scss';
+
 
 addDecorator(withA11y);
+addDecorator(withKnobs);
+addDecorator(jsxDecorator);
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here

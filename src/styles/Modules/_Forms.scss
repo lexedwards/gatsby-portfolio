@@ -1,0 +1,98 @@
+.textfield {
+  margin: 1.5rem;
+  position: relative;
+  &--label {
+    display: flex;
+    background-color: none;
+    border-radius: 0.25rem;
+  }
+  &--input {
+    width: 50%;
+    flex: 1 1 auto;
+    background: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: color($neutral, 400);
+    color: color($neutral, 200);
+    resize: none;
+    &:focus {
+      border-color: color($Primary,300);
+    }
+    &::placeholder {
+      color: color($neutral, 200);
+    }
+    &.isValid {
+      border-color: color($Accent2, 300);
+    }
+    &.isInvalid, &:invalid {
+      border-color: color($Accent3, 300);
+      box-shadow: none;
+    }
+    &:active, &:focus {
+      border-color: color($Primary, 300);
+      &::placeholder {
+        color: color($neutral, 200);
+      }
+    }
+  }
+
+  &--message {
+    display: none;
+    margin-top: 0;
+  }
+
+  &--icon {
+    align-self: center;
+    margin-left: 0.25rem;
+    fill: $Foreground;
+    fill-rule: evenodd;
+    position: absolute;
+    right: 0.75rem;
+    &.tickbox {
+      fill: color($Accent2, 300);
+    }
+    &.crossbox {
+      fill: color($Accent3, 300);
+    }
+  }
+
+  &.disabled {
+    .textfield--label {
+      background-color: color($neutral, 800);
+    }
+    .textfield--input {
+      cursor: not-allowed;
+    }
+  }
+  &.active {
+    .textfield--label  {
+      border-color: color($Primary, 300);
+    }
+    .textfield--input {
+      &::placeholder {
+        color: color($neutral, 200);
+      }
+    }
+  }
+
+}
+
+.form-page {
+  border-radius: 0.25rem;
+  padding: 1.5rem 1rem;
+  max-width: calc(100vw - 48px);
+  width: max-content;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $Foreground;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  .form--group {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+}

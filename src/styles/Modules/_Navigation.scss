@@ -1,0 +1,118 @@
+@import '../Variables/_colors';
+
+.menu-button {
+  @media (min-width: 48rem) {
+    display: none;
+  }
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.6rem;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: content-box;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 900;
+  .bar {
+    width: 1.5rem;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    transition: transform 0.2s 0.2s;
+    background-color: color($neutral, 100);
+  }
+  &:hover {
+    .bar {
+      background-color: color($Primary, 200);
+    }
+  }
+  &:focus {
+    .bar {
+      background-color: color($Secondary, 200);
+    }
+  }
+  &--box {
+    display: none;
+  }
+  &--box:checked ~ & {
+    .top {
+      transform: translate(0, 0.5rem ) rotate(-45deg);
+    }
+    .middle {
+      transform: scale(0, 1);
+      transition: transform 0.4s 0s;
+    }
+    .bottom {
+      transform: translate(0, -0.5rem ) rotate(45deg); 
+    }
+  }
+}
+
+.main-nav {
+  height: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  &--menu {
+    display: none;
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    z-index: 800;
+  }
+  &--item {
+    list-style: none;
+    a {
+      padding: 2rem;
+    }
+  }
+  @media (min-width: 48rem) {
+    top: unset; left: unset;
+    bottom: 0;
+    height: unset;
+    &--menu{
+      position: absolute;
+      background-color: $Background;
+      width: 100vw;
+      height: auto;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: color($Accent1, 300);
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding: 0.5rem;
+      top: unset;
+      bottom: 0;
+    }
+    &--item {
+      width: 100px;
+      text-align: center;
+      margin-right: 2rem;
+      a {
+        padding: 0.25rem 0.5rem;
+      }
+      &:last-child {
+        margin-right: 0rem;
+      }
+      &.main-nav--social {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu-button--box:checked ~ .main-nav--menu {
+  display: flex;
+  background-color: $Background;
+}
+
+@media (min-width: 48rem) {
+  .main-nav--menu {
+    display: flex;
+  }
+}

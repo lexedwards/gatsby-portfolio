@@ -1,0 +1,11 @@
+@mixin button($bg: rgb(176, 171, 155), $shadow: rgb(39, 50, 55)) {
+  background: $bg;
+  box-shadow: 0 6px 4px $shadow;
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 2px $shadow;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}

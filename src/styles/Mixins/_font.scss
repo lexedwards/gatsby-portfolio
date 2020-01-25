@@ -1,0 +1,39 @@
+$main: 'Poppins';
+$code: 'Source Code Pro';
+$sans-serif-family: Verdana, sans-serif;
+$monospace-family: 'Courier New', Courier, monospace;
+
+@mixin font(
+  $fonts: $main,
+  $weight: 300,
+  $size: 1rem,
+  $lineheight: 1.5,
+  $margin-bottom: 1.5rem
+) {
+  $capheight: 0.71875;
+  @if $fonts == $code {
+    $capheight: 0.875;
+  };
+
+  // Poppins = 0.7 Cap / Source Code Pro = 0.71
+
+  $shift: $size * ($lineheight - $capheight) / 2;
+
+  $family: $sans-serif-family;
+  @if $fonts == $code {
+    $family: $monospace-family;
+  };
+
+  @if $margin-bottom == 0 {
+    margin-bottom: $margin-bottom;
+  } @else {
+    margin-bottom: $margin-bottom - $shift;
+    padding-top: $shift;
+  }
+
+  margin-top: 0;
+  font-family: $fonts, $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineheight;
+}

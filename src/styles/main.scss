@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,700,800|Source+Code+Pro:400&display=swap");
+
+@import './Modules/Typography';
+@import './Modules/_Actions';
+@import './Modules/Navigation';
+@import './Modules/_UI';
+@import './Modules/_Forms';
+
+@media screen and (max-width: 30rem) {
+  html {
+    font-size: 14px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0rem;
+  background: $Background;
+  color: $Foreground;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1.5rem 1rem;
+  min-height: calc(var(--vh, 1vh) * 100);
+  justify-content: center;
+  @media (max-width: 47.9375rem) {
+    & > * {
+    width: 100%;
+    }
+  }
+  @media (min-width: 48rem) {
+    display: grid;
+    gap: 1.5rem 1rem;
+    grid-template-columns: 
+      [col-left] 
+      repeat(5, minmax(6.25rem, 1fr) [col] ) 
+      [col-right];
+    grid-template-rows: 
+      [row-top] 1fr
+      [row-bottom];
+    .flexcol-center {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
+  }
+  .col{
+    &1{
+      grid-column-end: span 1;
+    }
+    &2{
+      grid-column-end: span 2;
+    }
+    &3{
+      grid-column-end: span 3;
+    }
+    &4{
+      grid-column-end: span 4;
+    }
+  }
+}

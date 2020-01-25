@@ -1,0 +1,91 @@
+@import '../Mixins/_font';
+@import '../Variables/colors';
+
+.snackbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: color($Accent1,500);
+  &--message{
+    margin: 0 0.5rem;
+    color: color($Accent1, 100);
+  }
+  .action {
+    padding: 0.5rem;
+    color: color($Accent1, 200);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.modal-message {
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 1.5rem;
+  & > svg {
+    width: 24px;
+    stroke: #555;
+    stroke-width: 2px;
+    stroke-linecap: round;
+  }
+  &--display {
+    margin: 0 0.5rem;
+    width: auto;
+    flex: 1 1 0;
+  }
+  &--button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    svg {
+      width: 16px;
+      stroke: #fff;
+      stroke-width: 2px;
+      stroke-linecap: round;
+    }
+  }
+  &.primary {
+    background-color: color($Primary, 100);
+    color: color($Primary, 500);
+    svg {
+      stroke: color($Primary, 500);
+    }
+  }
+  &.secondary {
+    background-color: color($Secondary, 100);
+    color: color($Secondary, 500);
+    svg {
+      stroke: color($Secondary, 500);
+    }
+  }
+  &.accent1 {
+    background-color: color($Accent1, 100);
+    color: color($Accent1, 500);
+    svg {
+      stroke: color($Accent1, 500);
+    }
+  }
+  &.accent2 {
+    background-color: color($Accent2, 100);
+    color: color($Accent2, 500);
+    svg {
+      stroke: color($Accent2, 500);
+    }
+  }
+  &.accent3 {
+    background-color: color($Accent3, 100);
+    color: color($Accent3, 500);
+    svg {
+      stroke: color($Accent3, 500);
+    }
+  }
+}

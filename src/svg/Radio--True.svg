@@ -1,0 +1,11 @@
+<svg
+  xmln="http://w3.org/2000/svg"
+  width="16px"
+  height="16px"
+  id="SVG-Radio--True"
+  viewBox="0 0 16 16"
+  fill="none"
+>
+  <circle cx="8" cy="8" r="7" stroke="#202B31" strokeWidth="2" />
+  <circle cx="8" cy="8" r="4" fill="#3098D9" />
+</svg>

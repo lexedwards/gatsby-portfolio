@@ -1,0 +1,26 @@
+<svg
+  xmln="http://w3.org/2000/svg"
+  width="16px"
+  height="16px"
+  id="SVG-Radio--Checked"
+  viewBox="0 0 16 16"
+  fill="none"
+>
+  <circle className="fill" cx="8" cy="8" r="4" fill="" />
+  <path
+    d="M5 7L8 9.99999L15 3"
+    className="stroke"
+    stroke=""
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M15 8C15 12 12 15 8 15C4 15 1 12 1 8C1 4 4 1 8 1C9.08727 1 10.1007 1.22166 11 1.6248"
+    className="stroke"
+    stroke=""
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>

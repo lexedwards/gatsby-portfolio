@@ -1,14 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `title`,
-    description: `description`,
+    title: `Alex Edwards / Full Stack Dev`,
+    description: `Alex Edwards' Full-Stack Portfolio`,
     about: {
-      author: `Name`,
-      email: `e@mail.com`,
-      twitter: `twitter.com/@`,
-      github: `github.com/@`,
-      linkedIn: `linkedin.com/in/@`
+      author: `Alex Edwards`,
+      email: `hello@alexedwards.co`,
+      twitter: `twitter.com/_lexedwards`,
+      github: `github.com/lexedwards`,
+      linkedIn: `linkedin.com/in/lexedwards`
     },
+    siteURL: `alexedwards.co`,
+    headline: ``,
+    image: ``,
+    logo: ``
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +30,14 @@ module.exports = {
         path: `${__dirname}/src/svg`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -36,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-jest-storybooks-template`,
-        short_name: `gatsby-template`,
+        name: `Alex Edwards / Full Stack Web Debv`,
+        short_name: `Alex Edwards / Full Web Dev`,
         start_url: `/`,
         background_color: `#FFF`,
         theme_color: `#FFF`,
@@ -53,10 +65,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)(),
+          require("autoprefixer")(),
+          require('cssnano')()
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-XXXXXXXXX-X",
+        trackingId: "UA-156302723-1",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

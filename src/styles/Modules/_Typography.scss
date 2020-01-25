@@ -1,0 +1,126 @@
+@import '../Mixins/_font';
+@import '../Variables/colors';
+
+.major {
+  @include font($main, 900, 5.653rem, 1.06);
+  text-transform: uppercase;
+}
+.bold {
+  @include font($main, 700, 3.998rem, 1.13);
+  text-transform: uppercase;
+}
+.regular {
+  @include font($main, 500, 2.827rem, 1.065);
+  text-transform: uppercase;
+}
+.minor {
+  @include font($main, 500, 1.999rem, 1.5);
+  text-transform: uppercase;
+}
+.quote {
+  @include font($main, 700, 1.414rem, 1.06)
+}
+.standout {
+  @include font($main, 700, 1.414rem, 1.06)
+}
+.lead {
+  @include font($main, 500, 1rem, 1.5)
+}
+.para {
+  @include font($main, 300, 1rem, 1.5)
+}
+.ui {
+  font-family: 'Poppins', Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  @include font($main, 500, 1rem, 1.5, 0);
+
+}
+.code {
+  @include font($code, 500, 1rem, 1.2)
+}
+.micro {
+  @include font($main, 500, 0.707rem, 1.02)
+}
+
+.link {
+  text-decoration: underline dashed 1px;
+  &:hover, &.hover {
+    text-decoration-style: solid;
+  }
+
+  &.Neutral {
+    &:link {
+      color: color($neutral, 200);
+    }
+    &:hover {
+      color: color($neutral, 100);
+    }
+    &:visited {
+      color: color($neutral, 300);
+    }
+  }
+
+  &.Primary {
+    &:link {
+      color: color($Primary, 200);
+    }
+    &:hover {
+      color: color($Primary, 100);
+    }
+    &:visited {
+      color: color($Primary, 300);
+    }
+  }
+
+  &.Secondary {
+    &:link {
+      color: color($Secondary, 200);
+    }
+    &:hover {
+      color: color($Secondary, 100);
+    }
+    &:visited {
+      color: color($Secondary, 300);
+    }
+  }
+
+  &.Accent1 {
+    &:link {
+      color: color($Accent1, 200);
+    }
+    &:hover {
+      color: color($Accent1, 100);
+    }
+    &:visited {
+      color: color($Accent1, 300);
+    }
+  }
+
+}
+
+.neutral {
+  color: color($neutral, 100);
+  &-300 {color: color($neutral, 300)}
+  &-400 {color: color($neutral, 400)}
+  &-800 {color: color($neutral, 800)}
+}
+
+.primary {
+  color: color($Primary, 200);
+}
+
+.secondary {
+  color: color($Secondary, 200);
+}
+
+.accent1 {
+  color: color($Accent1, 200);
+}
+.accent2 {
+  color: color($Accent2, 200);
+}
+.accent3 {
+  color: color($Accent3, 200);
+}

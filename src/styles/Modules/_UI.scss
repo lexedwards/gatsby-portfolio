@@ -1,0 +1,174 @@
+@import '../Mixins/_button';
+@import '../Mixins/_font';
+
+.button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  text-decoration: none;
+  &.large {
+    padding: 1rem 4rem;
+    width: max-content;
+  }
+  &.medium {
+    padding: 0.5rem 2rem;
+    width: max-content;
+  }
+  &.icon {
+    padding: 0.25rem;
+    width: 24px; height: 24px;
+  }
+  border-radius: 4px;
+  transition: translate 0.2s, opacity 0.2s, box-shadow 0.2s;
+    &:hover, &:focus, &.hover {
+      cursor: pointer;
+      transform: translate(0, 2px);
+    }
+    &:active, &.active {
+      transform: translate(0, 4px);
+    }
+
+  &-primary {
+    color: color($neutral, 100);
+    background-color: color($Primary, 400);
+    &:active, &.active {
+      background-color: color($Primary, 500);
+    }
+  }
+  &-secondary {
+    color: color($neutral, 100);
+    background-color: color($Secondary, 400);
+    &:active, &.active {
+      background-color: color($Secondary, 500);
+    }
+  }
+  &-disabled {
+    color: color($neutral, 300);
+    background-color: color($neutral, 800);
+    &:hover, &:focus, &.hover, &:active, &.active {
+      transform: none;
+      cursor: not-allowed;
+    }
+  }
+  &-accent1 {
+    color: color($neutral, 100);
+    background-color: color($Accent1, 400);
+    &:active, &.active {
+      background-color: color($Accent1, 500);
+    }
+  }
+  &-accent2 {
+    color: color($neutral, 100);
+    background-color: color($Accent2, 400);
+    &:active, &.active {
+      background-color: color($Accent2, 500);
+    }
+  }
+  &-accent3 {
+    color: color($neutral, 100);
+    background-color: color($Accent3, 400);
+    &:active, &.active {
+      background-color: color($Accent3, 500);
+    }
+  }
+}
+
+.card {
+  margin: 1rem;
+  transition: translate 0.2s, opacity 0.2s, box-shadow 0.2s;
+  border-radius: 4px;
+  border: solid 1px color($neutral, 100); 
+  input[type='radio'],
+  input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+  }
+  svg {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    .stroke {
+      stroke: color($neutral, 300);
+    }
+  }
+  label,
+  & > div {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    border-radius: 4px;
+    &[for] {
+      cursor: pointer;
+    }
+    h2, h3, p {
+      margin-top: 0;
+    }
+  }
+  &.checked {
+    border-color: color($Accent2, 300);
+    p { 
+      color: color($Accent2, 300);
+    }
+    svg {
+      .fill {
+        fill: color($Accent2, 400)
+      }
+      .stroke {
+        stroke: color($neutral, 100)
+      }
+    }
+  }
+}
+
+.status{
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  text-align: center;
+  margin: 1rem;
+  &-key{
+    padding: 0.25rem;
+    flex: auto;
+    border-radius: 4px 0 0 4px;
+    p {
+      @include font($code, 400, 0.875rem, 1, 0);
+      text-transform: lowercase;
+    }
+  }
+  &-value{
+    padding: 0.25rem;
+    flex: auto;
+    border-radius: 0 4px 4px 0;
+    p {
+      @include font($code, 400, 0.875rem, 1, 0);
+    }
+  }
+}
+
+.gridlines {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  &--baseline {
+    position: absolute;
+    background-image: repeating-linear-gradient(0deg, transparent 0px, transparent 23px, rgba(255, 0, 0, 0.2) 23px, rgba(255, 0, 0, 0.2) 24px);
+    background-size: 24px;
+    background-position: top left;
+  }
+  &--columns {
+    position: fixed;
+    background-position: calc(50%);
+    background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 24px, rgba(255, 0, 0, 0.075) 24px, rgba(255, 0, 0, 0.075) calc(100%-24px), transparent calc(100%-24px), transparent 100%);
+    background-size: 100%;
+    @media screen and (min-width: 48rem) {
+      background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 32px, rgba(255, 0, 0, 0.075) 32px, rgba(255, 0, 0, 0.075) 132px);
+      background-size: 132px;
+      background-position: calc(50%-16px);
+    }
+  }
+}

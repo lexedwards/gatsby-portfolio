@@ -9,14 +9,16 @@ export default () => (
 
   <Layout>
     <SEO title="404: Not found" />
-    <main className="full-frame flex-start">
-      <h1 className="bold">
-       <span className="primary">Whoops!</span>
-      </h1>
-      <p className="lead">Looks like we took a wrong turn, were you looking for me?</p>
-      <Button size="large" type="accent3" label="Take me home" action={() => { window.location.replace(`//${window.location.host}`)}}>
-        Go back
-      </Button>
+    <main className="content">
+      <div className="col3 flexcol-center">
+        <h1 className="bold">
+         <span className="primary">Whoops!</span>
+        </h1>
+        <p className="lead">Looks like we took a wrong turn, were you looking for me?</p>
+        <Button size="large" type="accent3" label="Take me home" action={() => { window.location.replace(`//${window.location.host}`)}}>
+          Go back
+        </Button>
+      </div>
     </main>
   </Layout>
 )

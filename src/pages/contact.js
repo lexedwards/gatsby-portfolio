@@ -40,6 +40,7 @@ export default () => {
           </a></p>
           <p className="para">
             If it's more convenient, you can quickly shoot me a message here!
+            <p className="lead secondary">~ Just be sure to let me know how to contact you!</p>
           </p>
         </div>
           <NetlifyForm

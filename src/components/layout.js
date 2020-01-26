@@ -26,10 +26,6 @@ const Layout = ({ children }) => {
     {
       name: "contact",
       url: "contact/"
-    },
-    { 
-      name: "design",
-      url: "design/" 
     }
   ];
 

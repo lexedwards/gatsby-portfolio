@@ -14,6 +14,10 @@ export default () => (
           and nodeJS servers.
         </p>
         <p className="para">
+          My previous projects have utilised stacks including Node, SCSS, Webpack
+          React, ExpressJS, MongoDB, D3, Bcrypt. 
+        </p>
+        <p className="para">
           <span className="secondary">For now however,</span> please, visit my {' '}
           <a 
             href="//github.com/lexedwards"
@@ -25,8 +29,10 @@ export default () => (
           </a>
           {' '}page to see all my work, the documentation and it's source code.
         </p>
+        
         <p className="para accent1">
-          I'm sorry <span role="img" aria-label="Sad Emotion">😔</span>
+          Due to the nature of the beast, past projects have utilised different technology stacks,
+          whilst this website utilises GatsbyJS, this is my first project using it.
         </p>
       </div>
     </main>

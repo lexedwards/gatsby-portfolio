@@ -49,13 +49,13 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Alex Edwards / Full Stack Web Debv`,
-        short_name: `Alex Edwards / Full Web Dev`,
+        short_name: `Alex Edwards Web Dev`,
         start_url: `/`,
-        background_color: `#FFF`,
+        background_color: `#2a323c`,
         theme_color: `#FFF`,
         theme_color_in_head: true,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `./src/images/Person.png`, // This path is relative to the root of the site.
       },
     },
     {

@@ -16,6 +16,9 @@ const NetlifyForm = ({ name, action, useFormState, children, className }) => {
   }
 
   const handleSubmit = e => {
+
+    //Form Validation
+    
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },

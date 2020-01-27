@@ -50,44 +50,44 @@ export default () => {
             className="col3 flexcol-center"
           >
             <FormGroup>
-            <FormField
-              uniqueId="input--fullname"
-              type="text"
-              name="Full Name"
-              placeholder="Name"
-              isRequired={true}
-              errorMessage="So, What do I call you?"
-              hasVerification={true}
-              handleChange={handleChange}
-            />
-            <FormField
-              uniqueId="input--email"
-              type="email"
-              placeholder="Email"
-              isRequired={true}
-              errorMessage="Can I have your Email please?"
-              hasVerification={true}
-              handleChange={handleChange}
-            />
-            <TextField 
-              uniqueId="input--message"
-              name="Message"
-              isRequired={true}
-              placeholder="Write your message..."
-              errorMessage="Maybe an Introduction?"
-              rows="5"
-              handleChange={handleChange}
-            />
-          </FormGroup>
-          <input type="hidden" name="form-name" value="Contact Form" />
-          <Button
-            type="secondary"
-            isSubmit
-            size="large"
-            label="Say Hi and let me know what you're interested in"
-          >
-            Send me a Message
-          </Button>
+              <FormField
+                uniqueId="input--fullname"
+                type="text"
+                name="Full Name"
+                placeholder="Name"
+                isRequired="true"
+                errorMessage="So, What do I call you?"
+                hasVerification={true}
+                handleChange={handleChange}
+              />
+              <FormField
+                uniqueId="input--email"
+                type="email"
+                placeholder="Email"
+                isRequired="true"
+                errorMessage="Can I have your Email please?"
+                hasVerification={true}
+                handleChange={handleChange}
+              />
+              <TextField 
+                uniqueId="input--message"
+                name="Message"
+                isRequired="true"
+                placeholder="Write your message..."
+                errorMessage="Maybe an Introduction?"
+                rows="5"
+                handleChange={handleChange}
+              />
+            </FormGroup>
+            <input type="hidden" name="form-name" value="Contact Form" />
+            <Button
+              type="secondary"
+              isSubmit
+              size="large"
+              label="Say Hi and let me know what you're interested in"
+            >
+              Send me a Message
+            </Button>
           </NetlifyForm>
         </main>
     </Layout>

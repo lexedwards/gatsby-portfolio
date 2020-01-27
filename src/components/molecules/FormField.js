@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Input, { LongInput } from './atoms/FormBlock';
-import ModalMessage from './atoms/ModalMessage';
 
 const FormField = (props) => {
 
@@ -12,12 +11,6 @@ const FormField = (props) => {
     <div className="textfield">
       <p className="textfield--helper-label ui">{label}</p>
       <Input {...props}/>
-      {!isValid && 
-      (<ModalMessage
-        theme="accent3"
-      >
-        {props.errorMessage}
-      </ModalMessage> )} 
     </div>
   );
 };
@@ -32,12 +25,6 @@ export const TextField = (props) => {
     <div className="textfield">
       <p className="textfield--helper-label ui">{label}</p>
       <LongInput {...props}/>
-      {!isValid && 
-      (<ModalMessage
-        theme="accent3"
-      >
-        {props.errorMessage}
-      </ModalMessage> )} 
     </div>
   );
 

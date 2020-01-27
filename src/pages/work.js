@@ -32,7 +32,18 @@ export default () => (
         
         <p className="para accent1">
           Due to the nature of the beast, past projects have utilised different technology stacks,
-          whilst this website utilises GatsbyJS, this is my first project using it.
+          whilst this website utilises GatsbyJS, this is my first project using it. I want this 
+          website to progress to more than a portfolio of past endeavours, so at it's {' '}
+          <a 
+            href="//github.com/lexedwards/gatsby-portfolio" 
+            rel="dns-prefetch noopener nofollow noreferrer"
+            target="_blank" 
+            className="link primary"
+          >
+            sourcecode
+          </a>
+          {' '}
+          it's developed something more complicated than what you see
         </p>
       </div>
     </main>

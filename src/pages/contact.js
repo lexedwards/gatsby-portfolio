@@ -14,6 +14,32 @@ export default () => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
+  /*
+  
+  
+  Todo:
+
+  Refactor existing code to create a better implementation
+
+  I know this is a bit messy, I've been fighiting forms to get working across all devices,
+    ios and safari are a big issue here.
+  
+  I still want to keep it modular however
+
+  - Form (Standard / Netlify etc)
+  |- Form Group ( For progressional forms with different slides in the future )
+   | - Form Field 
+    { What information, what input etc. There is a lot of logic here,
+      What is best though? 
+        * One import <FormField /> and specify with props
+        * Many imports such as { text, email, ... } resulting in repetative code
+    }
+  
+  
+  */
+
+
+
   return (
     <Layout>
       <SEO title="Contact" />

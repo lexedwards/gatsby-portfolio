@@ -126,6 +126,7 @@ export default function Input (props) {
       disabled={inputDeclare.isDisabled}
       autoCorrect={inputDeclare.hasAutocorrect}
       autoCapitalize={inputDeclare.autocapitalize}
+      required={inputDeclare.isRequired}
       inputMode={inputDeclare.inputMode}
       onChange={inputDeclare.handleChange}
       />

@@ -13,6 +13,13 @@ export default () => (
           that have various technologies involved. From simple static sites, to API services,
           and nodeJS servers.
         </p>
+        <p className="para"> For up-to-date info on what I'm doing, {' '}
+          <a href="//twitter.com/_lexedwards" 
+            rel="dns-prefetch noopener nofollow noreferrer" 
+            target="_blank" 
+            className="link primary">
+              check in on me through twitter!
+            </a> </p>
         <p className="para">
           My Portfolio project utilises Gatsby for performant React development with
           great SEO in a serverless paradym. I'm constantly learning however, currently tackling

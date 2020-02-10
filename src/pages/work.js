@@ -14,6 +14,17 @@ export default () => (
           and nodeJS servers.
         </p>
         <p className="para">
+          My Portfolio project utilises Gatsby for performant React development with
+          great SEO in a serverless paradym. I'm constantly learning however, currently tackling
+          GraphQL, Cypress, and TailwindCSS in a simple {' '}
+          <a 
+            href="//github.com/lexedwards/CurrencyConverter"
+            className="link primary"
+            rel="dns-prefetch noopener nofollow noreferrer"
+            target="_blank" > 
+            Currency Converting app.
+          </a>
+          {' '}
           My previous projects have utilised stacks including Node, SCSS, Webpack
           React, ExpressJS, MongoDB, D3, Bcrypt. 
         </p>
